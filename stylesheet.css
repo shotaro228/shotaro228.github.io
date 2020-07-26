@@ -1,0 +1,26 @@
+.top-wrapper {
+  height: 250px;
+  background-image: url(top.png);
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  padding: 15px 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper h1 {
+  font-size: 17px;
+}
+
+.btn-wrapper {
+  margin: 30px 25px;
+}
+
+.btn {
+  padding: 50px 40px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+}
