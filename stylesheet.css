@@ -1,12 +1,13 @@
-span {
-  font-weight: bold;
-}
-
-.top-wrapper {
-  height: 300px;
-  background-image: url(top.png);
+.main {
+  height: auto;
+  width: 100%;
+  background-image: url(top.jpg);
   background-size: cover;
   color: white;
+}
+
+span {
+  font-weight: bold;
 }
 
 .container {
@@ -14,37 +15,133 @@ span {
   margin: 0 auto;
 }
 
-.top-wrapper h1 {
-  font-size: 17px;
+.top-wrapper h1,p {
+  font-size: 30px;
 }
 
 .btn-wrapper {
-  margin: 70px 25px;
+  margin-top: 80px;
   text-align: center;
 }
 
-.btn {
-  padding: 30px 30px;
-  color: white;
+.btn-edge {
+  position: relative;
   display: inline-block;
-  opacity: 0.8;
+  text-decoration: none;
+  padding: 0 30px;
+  margin: 0 30px;
+  font-size: 19px;
+  height: 40px;
+  line-height: 40px;
+  background: #ba5536;
+  color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+.btn-edge:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 21px white;
+  border-bottom: solid 41px transparent;
+  z-index: 1;
+  transition: .4s;
+}
+
+.btn-edge:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 21px transparent;
+  border-bottom: solid 41px white;
+  z-index: 1;
+  transition: .4s;
+}
+
+.btn-edge:hover:before, .btn-edge:hover:after {
+  border-left-width: 25px;
+}
+
+.btn-edge:hover {
+  background: #693d3d;
 }
 
 .content {
   margin-left: 20px;
 }
 
+h2 {
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  font-size: 30px;
+  text-align: center;
+}
+h2:before, h2:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: white;
+}
+h2:before {
+  left: 7px;
+}
+h2:after {
+  right: 7px;
+}
+
+.self-image {
+  text-align: center;
+}
+
 img {
-  width :150px;
+  width :250px;
 }
 .introduction-content{
   margin-left: 30px;
+  font-size: 20px;
 }
 
 .career-content {
   margin-left: 30px;
+  font-size: 20px;
 }
 
-.skill-content {
-   margin-left: 30px;
+.skill-wrapper span {
+  font-size: 25px;
 }
+
+ul {
+  padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
+  border: solid 3px white;/*線の種類 太さ 色*/
+  font-size:25px;
+}
+
+ul li {
+  line-height: 1.5; /*文の行高*/
+  padding: 0.5em 0; /*前後の文との余白*/
+}
+
+.contact-content {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border-top: solid 5px white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.contact-wrapper p {
+    margin: 0; 
+    padding: 0;
+}
+
